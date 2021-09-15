@@ -11,11 +11,9 @@ func main() {
 	//flag.Parse()
 	if len(os.Args) == 1 {
 		fmt.Println(0)
+	} else if len(os.Args[1]) == 0 {
+		fmt.Println(0)
 	} else {
-		cnt := strings.Count(os.Args[1], " ")
-		if cnt > 0 {
-			cnt += 1
-		}
-		fmt.Println(cnt)
+		fmt.Println(strings.Count(os.Args[1], " ") + 1)
 	}
 }
