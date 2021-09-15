@@ -12,6 +12,10 @@ func main() {
 	if len(os.Args) == 1 {
 		fmt.Println(0)
 	} else {
-		fmt.Println(strings.Count(os.Args[1], " ") + 1)
+		cnt := strings.Count(os.Args[1], " ")
+		if cnt > 0 {
+			cnt += 1
+		}
+		fmt.Println(cnt)
 	}
 }
