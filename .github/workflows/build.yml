@@ -16,6 +16,7 @@ jobs:
             - name: Test
               run: |
                   go mod init 'github.com/Purgas/wordcount'
+                  go list
                   go build .
                   ./wordcount '' | grep -E "^0$"
                   ./wordcount 'ok' | grep -E "^1$"
